@@ -1,0 +1,451 @@
+@charset "UTF-8";
+.ls-M, h1, h2, h3, h4, h5, h6, p, div, .works .btn__more {
+  letter-spacing: 0.9em;
+}
+
+.ls-S, p {
+  letter-spacing: 0.4em;
+}
+
+.fs-M, .about h2 {
+  font-size: 12px;
+}
+
+.fs-S, h1, h2, h3, h4, h5, h6, p, div {
+  font-size: 10px;
+}
+
+@media (min-width: 480px) {
+  .ls-M, h1, h2, h3, h4, h5, h6, p, div, .works .btn__more {
+    letter-spacing: 1em;
+  }
+  .ls-S, p {
+    letter-spacing: 0.4em;
+  }
+  .fs-M, .about h2 {
+    font-size: 12px;
+  }
+  .fs-S, h1, h2, h3, h4, h5, h6, p, div {
+    font-size: 12px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #707070;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #707070;
+}
+
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  line-height: 1.5;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 80px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, white), color-stop(80%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, white 5%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0));
+}
+
+header .topbar {
+  text-align: center;
+  padding: 20px;
+}
+
+header nav {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 3px 0 auto;
+  font-size: 12px;
+}
+
+header nav li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 8px 0;
+}
+
+header nav li a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header nav li a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  width: 100%;
+  height: 320px;
+  background-color: #707070;
+  text-align: center;
+}
+
+footer small {
+  color: white;
+  line-height: 320px;
+}
+
+@media screen and (min-width: 650px) {
+  .br-pc {
+    display: block;
+  }
+  .br-sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .br-pc {
+    display: none;
+  }
+  .br-sp {
+    display: block;
+  }
+}
+
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+main {
+  padding: 80px 62.5px 0 62.5px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 110px;
+}
+
+.mainvisual {
+  position: relative;
+}
+
+.mainvisual__bg {
+  width: 100%;
+  padding-top: 130%;
+  background-image: url(../../image/header.jpg);
+  background-size: cover;
+}
+
+.mainvisual__name {
+  position: absolute;
+  top: 60%;
+  left: 28%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mainvisual__name img {
+  width: 100%;
+}
+
+.about__img {
+  position: relative;
+  width: 100%;
+}
+
+.about__img--cover {
+  position: relative;
+  width: 90%;
+  padding-top: 90%;
+  background-color: #FFF4C9;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.about__img--photo {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about h2 {
+  margin-top: 60px;
+}
+
+.about p {
+  margin-top: 12px;
+}
+
+.works__main {
+  width: 100%;
+}
+
+.works__main .album {
+  display: block;
+  position: relative;
+}
+
+.works__main .album img {
+  width: 100%;
+  -webkit-animation-name: album;
+          animation-name: album;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.works__main .album__img01 {
+  display: block;
+}
+
+.works__main .album__img02 {
+  position: absolute;
+  top: 0;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.works__main .album__img03 {
+  position: absolute;
+  top: 0;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+@-webkit-keyframes album {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes album {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.works__sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.works__sub a {
+  width: 25%;
+  padding-bottom: 25%;
+  height: 0;
+  background-color: dimgray;
+  margin-top: 12.5%;
+}
+
+.works__sub a img {
+  width: 100%;
+}
+
+.works .btn__more {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.works .btn__more p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.works .btn__more .underline {
+  width: 80px;
+  height: 0.5px;
+  background-color: #707070;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.works .btn__more:hover .underline {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.contact__wrapper {
+  margin-top: 40px;
+}
+
+.contact a {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  letter-spacing: 0.4em;
+  border-radius: 10px;
+  border: 1px solid #707070;
+  background-color: white;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.contact a:hover {
+  background-color: #707070;
+  color: white;
+  -webkit-box-shadow: 0 0 8px rgba(112, 112, 112, 0.6);
+          box-shadow: 0 0 8px rgba(112, 112, 112, 0.6);
+}
+
+.contact .alert {
+  margin-top: 8px;
+}
+
+.contact .alert p {
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  /******************************************************************
+
+Stylesheet: 480px以上(スマホの横向き)のモニタで適用
+
+******************************************************************/
+}
+
+@media (min-width: 600px) {
+  /******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+  main {
+    padding: 80px 100px 0 100px;
+    margin: 0 auto;
+  }
+  section {
+    margin-bottom: 160px;
+  }
+  .mainvisual__bg {
+    width: 50%;
+    padding-top: 71%;
+    margin: 0 0 0 auto;
+  }
+  .mainvisual__name {
+    left: 40%;
+  }
+  .about {
+    margin-bottom: 180px;
+  }
+  .about__img {
+    width: 40%;
+  }
+  .about__sentence {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: -10%;
+  }
+  .about .layout__up600 {
+    position: relative;
+  }
+  .about h2 {
+    margin-top: 0px;
+  }
+  .about p {
+    margin-top: 24px;
+  }
+  .works .layout__up600 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .works__main {
+    width: 90%;
+  }
+  .works__sub {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .works__sub a {
+    margin: 0;
+    width: 20%;
+    padding-bottom: 20%;
+  }
+  .works .btn__more .underline {
+    width: 95px;
+  }
+}
+
+@media (min-width: 960px) {
+  /******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+  main {
+    width: 700px;
+    margin: 0 auto;
+    padding: 80px 0 0 0;
+  }
+  section {
+    margin-bottom: 340px;
+  }
+  .contact__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+  .contact a {
+    margin-top: 80px;
+    height: 120px;
+    line-height: 120px;
+  }
+  .about {
+    margin-bottom: 365.2px;
+  }
+  header nav {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 3px 0 auto;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1280px) {
+  /******************************************************************
+
+Stylesheet: 1280px以上のモニタで適用
+
+******************************************************************/
+}
+/*# sourceMappingURL=style.css.map */

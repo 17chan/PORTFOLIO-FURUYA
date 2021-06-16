@@ -1,0 +1,215 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+
+
+
+
+
+
+// from here
+
+main {
+    padding:80px 62.5px 0 62.5px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 110px;
+}
+
+.mainvisual {
+    position: relative;
+    &__bg {
+        width: 100%;
+        padding-top: 130%;
+        background-image: url(../../image/header.jpg);
+        background-size: cover;
+    }
+
+    &__name {
+        position: absolute;
+        top: 60%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        
+        
+
+        & img {
+            width: 100%;
+        }
+        
+
+    }
+}
+
+
+
+.about {
+    // height: 200px;
+
+    &__img {
+        position: relative;
+        width: 100%;
+        
+        &--cover {
+            position: relative;
+            width: 90%;
+            padding-top: 90%;
+            background-color: $orange;
+            opacity: 0.6;
+            z-index: 1;
+            
+        }
+        &--photo {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+    
+    h2 {
+        margin-top: 60px;
+        @extend .fs-M;
+    }
+
+    p {
+        margin-top: 12px;
+    }
+}
+
+.works {
+    &__main {
+        width: 100%;
+
+        .album {
+            display: block;
+            position: relative;
+
+            img {
+                
+            width: 100%;
+                animation-name: album;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                opacity: 0;
+            }
+
+            &__img01 {
+                display: block;
+            }
+            &__img02 {
+                position: absolute;
+                top: 0;
+                animation-delay:5s;
+            }
+            &__img03 {
+                position: absolute;
+                top: 0;
+                animation-delay:10s;
+            }
+            @keyframes album {
+                0% {
+                    opacity: 0;
+                }
+                
+                // 12.5% {
+                //     opacity: 1;
+                // }
+            
+                // 37.5% {
+                //     opacity: 1;
+                // }
+                50% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__sub {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        a {
+            width: 25%;
+            padding-bottom: 25%;
+            height: 0;
+            background-color: dimgray;
+            margin-top: 12.5%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .btn__more {
+        display: block;
+        margin:0 auto;
+        margin-top: 40px;
+        @extend .ls-M;
+        width: max-content;
+        p {
+            width: max-content;
+        }
+        
+        .underline {
+            width: 80px;
+            height: 0.5px;
+            background-color: $black;
+            
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all .3s;
+            transition: all .3s;
+        }
+        &:hover {
+            .underline {
+                -webkit-transform: scaleX(1); 
+                -ms-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+.contact {
+    &__wrapper {
+        margin-top: 40px;
+    }
+    a {
+        display: inline-block;
+        margin-top: 20px;
+        width: 100%;
+        height: 80px;
+
+        text-align: center;
+        line-height: 80px;
+        letter-spacing: 0.4em;
+
+        border-radius: 10px;
+        border: 1px solid $black;
+        background-color: $white;
+
+        transition: all .5s;
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+            box-shadow: 0 0 8px rgba($black, 0.6);
+        }
+    }
+    .alert {
+        margin-top: 8px;
+        
+        & p {
+            text-align: center;
+        }
+    }
+}

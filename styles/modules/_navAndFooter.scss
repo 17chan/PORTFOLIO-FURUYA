@@ -1,0 +1,43 @@
+@import "variables";
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: 80px;
+    
+    background: linear-gradient(to bottom, rgba(255, 255,255, 1) 5%,rgba(255, 255,255, 0.5) 80%,rgba(255, 255,255, 0));
+
+    .topbar {
+        text-align: center;
+        padding: 20px;
+    }
+    nav {
+        width: max-content;
+        margin: 0 3px 0 auto;
+        font-size: 10px;
+        li {
+            width: max-content;
+            margin: 8px 0;
+
+            a {
+                transition: all 0.3s;
+                // font-weight: bold;
+                &:hover {
+                    color: rgba(black, 0.5);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 320px;
+    background-color: $black;
+    text-align: center;
+    small {
+        color: $white;
+        line-height: 320px;
+    }
+}

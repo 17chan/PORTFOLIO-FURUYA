@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+.ls-M, h1, h2, h3, h4, h5, h6, p, div {
+  letter-spacing: 0.9em;
+}
+
+.ls-S, p {
+  letter-spacing: 0.4em;
+}
+
+.fs-M {
+  font-size: 12px;
+}
+
+.fs-S, h1, h2, h3, h4, h5, h6, p, div {
+  font-size: 10px;
+}
+
+@media (min-width: 480px) {
+  .ls-M, h1, h2, h3, h4, h5, h6, p, div {
+    letter-spacing: 1em;
+  }
+  .ls-S, p {
+    letter-spacing: 0.4em;
+  }
+  .fs-M {
+    font-size: 12px;
+  }
+  .fs-S, h1, h2, h3, h4, h5, h6, p, div {
+    font-size: 12px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #707070;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #707070;
+}
+
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  line-height: 1.5;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 80px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, white), color-stop(80%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, white 5%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0));
+}
+
+header .topbar {
+  text-align: center;
+  padding: 20px;
+}
+
+header nav {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 3px 0 auto;
+  font-size: 12px;
+}
+
+header nav li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 8px 0;
+}
+
+header nav li a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header nav li a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  width: 100%;
+  height: 320px;
+  background-color: #707070;
+  text-align: center;
+}
+
+footer small {
+  color: white;
+  line-height: 320px;
+}
+
+@media screen and (max-width: 500px) {
+  .sp-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .sp-none {
+    display: block;
+  }
+}
+
+main {
+  width: 55%;
+  margin: 0 auto;
+  padding: 80px 0;
+  margin-bottom: 80px;
+}
+
+.filterElements {
+  display: none;
+}
+
+.btn {
+  letter-spacing: 0.4em;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.5;
+}
+
+.show {
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.show:hover {
+  opacity: 0.5;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 80px;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.filterBtns {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 500px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .filterBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    gap: 54px;
+  }
+}
+/*# sourceMappingURL=works.css.map */

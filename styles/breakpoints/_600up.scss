@@ -1,0 +1,110 @@
+/******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+
+
+main {
+    padding: 80px 100px 0 100px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 160px;
+}
+
+// //letter-spacing 
+// .ls-M {
+//     letter-spacing: 1em;
+// }
+// .ls-S {
+//     letter-spacing: 0.4em;
+// }
+
+// // font size
+// .fs-M {
+//     font-size: 12px;
+// }
+// .fs-S {
+//     font-size: 12px;
+// }
+
+
+
+.mainvisual {
+    &__bg {
+        width: 50%;
+        padding-top: 71%;
+        margin: 0 0 0 auto;
+    }
+    &__name {
+        left: 40%;
+    }
+    // & img {
+    //     position: absolute;
+    //     width: 300px;
+    //     top: 50%;
+    //     left: 35%;
+    //     transform: translateY(-50%);
+    // }
+}
+
+
+.about {
+    margin-bottom: 180px;
+    
+    &__img {
+        width: 40%;
+    }
+    &__sentence {
+        width: 50%;
+
+        position:absolute;
+        right: 0;
+        bottom: -10%;
+    }
+
+    
+    .layout__up600 {
+        position: relative;
+    }
+    
+    h2 {
+        margin-top: 0px;
+    }
+    p {
+        margin-top: 24px;
+    }
+}
+
+
+
+
+.works {
+    .layout__up600 {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__main {
+        width: 90%;
+    }
+
+    &__sub {
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            margin: 0;
+            width: 20%;
+            padding-bottom: 20%;
+        }
+    }
+    .btn__more {
+        .underline {
+            width: 95px;
+        }
+
+    }
+
+}

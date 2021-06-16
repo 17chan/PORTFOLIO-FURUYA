@@ -1,0 +1,113 @@
+//variables
+$orange: #FFF4C9;
+$black: #707070;
+$white: white;
+
+
+//letter-spacing 
+.ls-M {
+    letter-spacing: 0.9em;
+}
+.ls-S {
+    letter-spacing: 0.4em;
+}
+
+//font size
+.fs-M {
+    font-size: 12px;
+}
+.fs-S {
+    font-size: 10px;
+}
+
+// // @import "breakpoints/base";  
+@media (min-width: 480px) {
+    //letter-spacing 
+    .ls-M {
+        letter-spacing: 1em;
+    }
+    .ls-S {
+        letter-spacing: 0.4em;
+    }
+
+    // font size
+    .fs-M {
+        font-size: 12px;
+    }
+    .fs-S {
+        font-size: 12px;
+    }
+}
+
+
+//共通部分
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: $black;
+    font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+a, a:hover {
+    text-decoration: none;
+    color: $black;
+}
+
+h1,h2,h3,h4,h5,h6,p,div {
+    margin: 0;
+    line-height: 1.5;
+    @extend .fs-S;
+    @extend .ls-M;
+}
+p {
+    @extend .ls-S;
+}
+
+
+
+//header
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: 80px;
+    
+    background: linear-gradient(to bottom, rgba(255, 255,255, 1) 5%,rgba(255, 255,255, 0.5) 80%,rgba(255, 255,255, 0));
+
+    .topbar {
+        text-align: center;
+        padding: 20px;
+    }
+    nav {
+        width: max-content;
+        margin: 0 3px 0 auto;
+        font-size: 12px;
+        li {
+            width: max-content;
+            margin: 8px 0;
+
+            a {
+                transition: all 0.3s;
+                // font-weight: bold;
+                &:hover {
+                    color: rgba(black, 0.5);
+                }
+            }
+        }
+    }
+}
+
+
+//footer
+footer {
+    width: 100%;
+    height: 320px;
+    background-color: $black;
+    text-align: center;
+    small {
+        color: $white;
+        line-height: 320px;
+    }
+}
+
+

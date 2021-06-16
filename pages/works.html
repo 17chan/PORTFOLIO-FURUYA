@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKS</title>
+    <link rel="icon" href="../image/my-favicon.png">
+    <link rel="stylesheet" href="../styles/venders/bootstrap-reboot.css">
+    <link rel="stylesheet" href="works.css">
+</head>
+<body id="works">
+    <header>
+        <a class="topbar" href="#works">
+            <h1>FURUYA HINATA</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html#home">HOME</a></li>
+                <li><a href="../index.html#about">ABOUT</a></li>
+                <li><a href="../index.html#works">WORKS</a></li>
+                <li><a href="../index.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="filterBtns">
+            <a href="#" class="btn active" onclick="filterSelection('all')">all</a>
+            <div class="sp-none">|</div>
+            <a href="#" class="btn" onclick="filterSelection('coding')">coding</a>
+            <div class="sp-none">|</div>
+            <a href="#" class="btn" onclick="filterSelection('design')">design</a>
+            <!-- <div class="sp-none">|</div>
+            <p class="btn" onclick="filterSelection('both')">design&coding</p> -->
+        </div>
+        
+        
+        <div class="container">
+            <div class="filterElements design">
+                <a href="works_item/works_aquarium.html"><img src="../image/works_design_aquarium.png" alt=""></a>
+                <p>2021.05　design</p>
+            </div>
+            <div class="filterElements design">
+                <a href="works_item/works_kiitos.html"><img src="../image/works_design_kiitos.jpg" alt=""></a>
+                <p>2021.04　design</p>
+            </div>
+            <div class="filterElements coding">
+                <a href="works_item/works_deitora.html"><img src="../image/works_coding_dairytrial.jpg" alt=""></a>
+                <p>2021.01　coding</p>
+            </div>
+            <div class="filterElements coding">
+                <a href="works_item/works_fitness.html"><img src="../image/works_coding_kuri.jpg" alt=""></a>
+                <p>2020.12　coding</p>
+            </div>
+            <div class="filterElements coding">
+                <a href="works_item/works_stayworld.html"><img src="../image/works_coding_udemy.jpg" alt=""></a>
+                <p>2020.11　coding</p>
+            </div>
+            <div class="filterElements design">
+                <a href="works_item/works_sns.html"><img src="../image/works_design_sns.jpg" alt=""></a>
+                <p>2020.09　design</p>
+            </div>
+            <div class="filterElements coding">
+                <a href="works_item/works_airbnb.html"><img src="../image/works_coding_bnb.jpg" alt=""></a>
+                <p>2020.09　coding</p>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <small>
+            &copy; FURUYA HINATA
+        </small>
+    </footer>
+
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../scripts/vendors/scroll.js"></script>
+    <script src="category.js"></script>
+</body>
+</html>
